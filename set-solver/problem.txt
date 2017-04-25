@@ -1,0 +1,35 @@
+The problem at hand is to write a solver for the game of Set.
+In case you're not familiar with the game, you can find a tutorial here:
+http://www.setgame.com/learn_play
+
+Task 1:
+Each card has symbols on it that vary across four dimensions: color, number, shape, and shading.
+There are three possible values per dimension (e.g. there are three possible colors: red, green, and purple).
+Start by writing a solver that takes in a collection of these cards (e.g. 9 cards, 12 cards, 15 cards, etc.),
+and returns all possible sets that can be made from the inputs.
+
+Task 2:
+Then, once you've solved the basic game,
+extend your solution to handle an arbitrary number of dimensions per card
+(e.g. each card now has a background color, with three possible values).
+
+Task 3:
+Then, once you've got arbitrary dimensions,
+extend your solution to handle an arbitrary size for the dimensions
+(e.g. there are now four possible shapes, four colors, four of every dimension).
+
+To recap:
+In task #1, there are four dimension (things that vary) and they are:
+color
+number
+shape
+shading
+In each dimension there are three possible values:
+e.g. color = red or green or purple, number (value) = 1 or 2 or 3.
+
+Another description of the game is here: https://en.wikipedia.org/wiki/Set_(game)
+This is basically a problem in combinatorics.
+
+The problem is split into three "tasks"
+each of which depends upon (or builds upon) the preceding tasks.
+Or more accuracy each following task is a generalization of the preceding task.
