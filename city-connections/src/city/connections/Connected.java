@@ -101,8 +101,8 @@ public class Connected {
     }
 
     private static void printUsageMessage() {
-        System.out.println("Usage: java Connected <filename>");
-        System.out.println("Example: java Connected ../cities.txt");
+        System.out.println("Usage: java city.connections.Connected <filename>");
+        System.out.println("Example: java city.connections.Connected ../cities.txt");
     }
 
     private static void printErrorMessage(String errorMessage) {
