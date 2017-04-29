@@ -1,0 +1,373 @@
+===============================================================================
+Testing getAvailableTimeSlotsForDate() ========================================
+===============================================================================
+Date:
+DATE [
+	2015-11-10 (Tue)
+	Applicable schedule:
+	SCHEDULE [
+	Days: Tue/Thu
+	Slots:
+	TIME SLOT [Start: 9 am; End: 5 pm; Duration: 8 hours; Max Reservations: 2; Current Reservations: 0]
+	TIME SLOT [Start: 5 pm; End: 8 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+	]
+	Reservations:
+	none
+	]
+
+Available slots:
+TIME SLOT [Start: 9 am; End: 5 pm; Duration: 8 hours; Max Reservations: 2; Current Reservations: 0]
+TIME SLOT [Start: 5 pm; End: 8 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+===============================================================================
+
+===============================================================================
+Testing getTimeSlotsWithOneAvailableReservation() =============================
+===============================================================================
+Date:
+DATE [
+	2015-11-16 (Mon)
+	Applicable schedule:
+	SCHEDULE [
+	Days: Mon/Wed/Fri
+	Slots:
+	TIME SLOT [Start: 9 am; End: 12 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+	TIME SLOT [Start: 12 pm; End: 5 pm; Duration: 5 hours; Max Reservations: 3; Current Reservations: 0]
+	TIME SLOT [Start: 5 pm; End: 8 pm; Duration: 3 hours; Max Reservations: 2; Current Reservations: 0]
+	]
+	Reservations:
+	none
+	]
+
+Slots with one available reservation:
+TIME SLOT [Start: 9 am; End: 12 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+
+Date:
+DATE [
+	2015-11-17 (Tue)
+	Applicable schedule:
+	SCHEDULE [
+	Days: Tue/Thu
+	Slots:
+	TIME SLOT [Start: 9 am; End: 5 pm; Duration: 8 hours; Max Reservations: 2; Current Reservations: 0]
+	TIME SLOT [Start: 5 pm; End: 8 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+	]
+	Reservations:
+	none
+	]
+
+Slots with one available reservation:
+TIME SLOT [Start: 5 pm; End: 8 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+
+Date:
+DATE [
+	2015-11-18 (Wed)
+	Applicable schedule:
+	SCHEDULE [
+	Days: Mon/Wed/Fri
+	Slots:
+	TIME SLOT [Start: 9 am; End: 12 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+	TIME SLOT [Start: 12 pm; End: 5 pm; Duration: 5 hours; Max Reservations: 3; Current Reservations: 0]
+	TIME SLOT [Start: 5 pm; End: 8 pm; Duration: 3 hours; Max Reservations: 2; Current Reservations: 0]
+	]
+	Reservations:
+	none
+	]
+
+Slots with one available reservation:
+TIME SLOT [Start: 9 am; End: 12 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+
+Date:
+DATE [
+	2015-11-19 (Thu)
+	Applicable schedule:
+	SCHEDULE [
+	Days: Tue/Thu
+	Slots:
+	TIME SLOT [Start: 9 am; End: 5 pm; Duration: 8 hours; Max Reservations: 2; Current Reservations: 0]
+	TIME SLOT [Start: 5 pm; End: 8 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+	]
+	Reservations:
+	none
+	]
+
+Slots with one available reservation:
+TIME SLOT [Start: 5 pm; End: 8 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+
+Date:
+DATE [
+	2015-11-20 (Fri)
+	Applicable schedule:
+	SCHEDULE [
+	Days: Mon/Wed/Fri
+	Slots:
+	TIME SLOT [Start: 9 am; End: 12 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+	TIME SLOT [Start: 12 pm; End: 5 pm; Duration: 5 hours; Max Reservations: 3; Current Reservations: 0]
+	TIME SLOT [Start: 5 pm; End: 8 pm; Duration: 3 hours; Max Reservations: 2; Current Reservations: 0]
+	]
+	Reservations:
+	none
+	]
+
+Slots with one available reservation:
+TIME SLOT [Start: 9 am; End: 12 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+
+===============================================================================
+
+===============================================================================
+Testing (Supervisor) removeScheduleForDate() ==================================
+===============================================================================
+Before removing schedule:
+DATE [
+	2015-11-17 (Tue)
+	Applicable schedule:
+	SCHEDULE [
+	Days: Tue/Thu
+	Slots:
+	TIME SLOT [Start: 9 am; End: 5 pm; Duration: 8 hours; Max Reservations: 2; Current Reservations: 0]
+	TIME SLOT [Start: 5 pm; End: 8 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+	]
+	Reservations:
+	none
+	]
+
+
+After removing schedule:
+DATE [
+	2015-11-17 (Tue)
+	Applicable schedule:
+	none
+	Reservations:
+	none
+	]
+
+
+===============================================================================
+
+===============================================================================
+Testing processCustomerRequest() ==============================================
+===============================================================================
+Request received:
+REQUEST [
+Request Type: delivery; Customer ID: 1; Request Date: Sat Nov 07 02:30:42 EST 2015;
+	Service Date: DATE [2015-11-10 (Tue)]
+	Service Time: 12 pm]
+
+Requested service date before request processing:
+DATE [
+	2015-11-10 (Tue)
+	Applicable schedule:
+	SCHEDULE [
+	Days: Tue/Thu
+	Slots:
+	TIME SLOT [Start: 9 am; End: 5 pm; Duration: 8 hours; Max Reservations: 2; Current Reservations: 0]
+	TIME SLOT [Start: 5 pm; End: 8 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+	]
+	Reservations:
+	none
+	]
+
+Requested service date after request processing:
+DATE [
+	2015-11-10 (Tue)
+	Applicable schedule:
+	SCHEDULE [
+	Days: Tue/Thu
+	Slots:
+	TIME SLOT [Start: 9 am; End: 5 pm; Duration: 8 hours; Max Reservations: 2; Current Reservations: 1]
+	TIME SLOT [Start: 5 pm; End: 8 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+	]
+	Reservations:
+	RESERVATION [Date: DATE [2015-11-10 (Tue)]; Time: 12 pm; Type: delivery; Customer: 1]
+
+	]
+
+Response sent:
+RESPONSE [Response Type: Success; Customer ID: 1]
+
+Request received:
+REQUEST [
+Request Type: pickup; Customer ID: 2; Request Date: Sat Nov 07 02:30:42 EST 2015;
+	Service Date: DATE [2015-11-17 (Tue)]
+	Service Time: 10 am]
+
+Requested service date before request processing:
+DATE [
+	2015-11-17 (Tue)
+	Applicable schedule:
+	none
+	Reservations:
+	none
+	]
+
+Requested service date after request processing:
+DATE [
+	2015-11-17 (Tue)
+	Applicable schedule:
+	none
+	Reservations:
+	none
+	]
+
+Response sent:
+RESPONSE [Response Type: Failure; Customer ID: 2]
+
+Request received:
+REQUEST [
+Request Type: delivery; Customer ID: 3; Request Date: Sat Nov 07 02:30:42 EST 2015;
+	Service Date: DATE [2015-11-25 (Wed)]
+	Service Time: 1 pm]
+
+Requested service date before request processing:
+DATE [
+	2015-11-25 (Wed)
+	Applicable schedule:
+	SCHEDULE [
+	Days: Mon/Wed/Fri
+	Slots:
+	TIME SLOT [Start: 9 am; End: 12 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+	TIME SLOT [Start: 12 pm; End: 5 pm; Duration: 5 hours; Max Reservations: 2; Current Reservations: 0]
+	TIME SLOT [Start: 5 pm; End: 8 pm; Duration: 3 hours; Max Reservations: 2; Current Reservations: 0]
+	]
+	Reservations:
+	none
+	]
+
+Requested service date after request processing:
+DATE [
+	2015-11-25 (Wed)
+	Applicable schedule:
+	SCHEDULE [
+	Days: Mon/Wed/Fri
+	Slots:
+	TIME SLOT [Start: 9 am; End: 12 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+	TIME SLOT [Start: 12 pm; End: 5 pm; Duration: 5 hours; Max Reservations: 2; Current Reservations: 1]
+	TIME SLOT [Start: 5 pm; End: 8 pm; Duration: 3 hours; Max Reservations: 2; Current Reservations: 0]
+	]
+	Reservations:
+	RESERVATION [Date: DATE [2015-11-25 (Wed)]; Time: 1 pm; Type: delivery; Customer: 3]
+
+	]
+
+Response sent:
+RESPONSE [Response Type: Success; Customer ID: 3]
+
+Request received:
+REQUEST [
+Request Type: pickup; Customer ID: 4; Request Date: Sat Nov 07 02:30:42 EST 2015;
+	Service Date: DATE [2015-11-25 (Wed)]
+	Service Time: 2 pm]
+
+Requested service date before request processing:
+DATE [
+	2015-11-25 (Wed)
+	Applicable schedule:
+	SCHEDULE [
+	Days: Mon/Wed/Fri
+	Slots:
+	TIME SLOT [Start: 9 am; End: 12 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+	TIME SLOT [Start: 12 pm; End: 5 pm; Duration: 5 hours; Max Reservations: 2; Current Reservations: 1]
+	TIME SLOT [Start: 5 pm; End: 8 pm; Duration: 3 hours; Max Reservations: 2; Current Reservations: 0]
+	]
+	Reservations:
+	RESERVATION [Date: DATE [2015-11-25 (Wed)]; Time: 1 pm; Type: delivery; Customer: 3]
+
+	]
+
+Requested service date after request processing:
+DATE [
+	2015-11-25 (Wed)
+	Applicable schedule:
+	SCHEDULE [
+	Days: Mon/Wed/Fri
+	Slots:
+	TIME SLOT [Start: 9 am; End: 12 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+	TIME SLOT [Start: 12 pm; End: 5 pm; Duration: 5 hours; Max Reservations: 2; Current Reservations: 2]
+	TIME SLOT [Start: 5 pm; End: 8 pm; Duration: 3 hours; Max Reservations: 2; Current Reservations: 0]
+	]
+	Reservations:
+	RESERVATION [Date: DATE [2015-11-25 (Wed)]; Time: 1 pm; Type: delivery; Customer: 3]
+	RESERVATION [Date: DATE [2015-11-25 (Wed)]; Time: 2 pm; Type: pickup; Customer: 4]
+
+	]
+
+Response sent:
+RESPONSE [Response Type: Success; Customer ID: 4]
+
+Request received:
+REQUEST [
+Request Type: delivery; Customer ID: 5; Request Date: Sat Nov 07 02:30:42 EST 2015;
+	Service Date: DATE [2015-11-25 (Wed)]
+	Service Time: 3 pm]
+
+Requested service date before request processing:
+DATE [
+	2015-11-25 (Wed)
+	Applicable schedule:
+	SCHEDULE [
+	Days: Mon/Wed/Fri
+	Slots:
+	TIME SLOT [Start: 9 am; End: 12 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+	TIME SLOT [Start: 12 pm; End: 5 pm; Duration: 5 hours; Max Reservations: 2; Current Reservations: 2]
+	TIME SLOT [Start: 5 pm; End: 8 pm; Duration: 3 hours; Max Reservations: 2; Current Reservations: 0]
+	]
+	Reservations:
+	RESERVATION [Date: DATE [2015-11-25 (Wed)]; Time: 1 pm; Type: delivery; Customer: 3]
+	RESERVATION [Date: DATE [2015-11-25 (Wed)]; Time: 2 pm; Type: pickup; Customer: 4]
+
+	]
+
+Requested service date after request processing:
+DATE [
+	2015-11-25 (Wed)
+	Applicable schedule:
+	SCHEDULE [
+	Days: Mon/Wed/Fri
+	Slots:
+	TIME SLOT [Start: 9 am; End: 12 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+	TIME SLOT [Start: 12 pm; End: 5 pm; Duration: 5 hours; Max Reservations: 2; Current Reservations: 2]
+	TIME SLOT [Start: 5 pm; End: 8 pm; Duration: 3 hours; Max Reservations: 2; Current Reservations: 0]
+	]
+	Reservations:
+	RESERVATION [Date: DATE [2015-11-25 (Wed)]; Time: 1 pm; Type: delivery; Customer: 3]
+	RESERVATION [Date: DATE [2015-11-25 (Wed)]; Time: 2 pm; Type: pickup; Customer: 4]
+
+	]
+
+Response sent:
+RESPONSE [Response Type: Failure; Customer ID: 5]
+
+===============================================================================
+
+===============================================================================
+Testing getReservations() =====================================================
+===============================================================================
+All current reservations in the system:
+RESERVATION [Date: DATE [2015-11-10 (Tue)]; Time: 12 pm; Type: delivery; Customer: 1]
+RESERVATION [Date: DATE [2015-11-25 (Wed)]; Time: 1 pm; Type: delivery; Customer: 3]
+RESERVATION [Date: DATE [2015-11-25 (Wed)]; Time: 2 pm; Type: pickup; Customer: 4]
+===============================================================================
+
+===============================================================================
+Testing (CalendarDate) getReservations() ======================================
+===============================================================================
+Date:
+DATE [
+	2015-11-10 (Tue)
+	Applicable schedule:
+	SCHEDULE [
+	Days: Tue/Thu
+	Slots:
+	TIME SLOT [Start: 9 am; End: 5 pm; Duration: 8 hours; Max Reservations: 2; Current Reservations: 1]
+	TIME SLOT [Start: 5 pm; End: 8 pm; Duration: 3 hours; Max Reservations: 1; Current Reservations: 0]
+	]
+	Reservations:
+	RESERVATION [Date: DATE [2015-11-10 (Tue)]; Time: 12 pm; Type: delivery; Customer: 1]
+
+	]
+
+All current reservations for the date:
+RESERVATION [Date: DATE [2015-11-10 (Tue)]; Time: 12 pm; Type: delivery; Customer: 1]
+===============================================================================
+
+
+Process finished with exit code 0
