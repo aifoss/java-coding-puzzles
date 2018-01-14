@@ -1,7 +1,7 @@
 package delivery.reservation.date_time.date;
 
 /**
- * Created by sofia on 4/28/17.
+ * Created by sofia on 11/7/15.
  */
 public enum Day {
 

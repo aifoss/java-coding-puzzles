@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Created by sofia on 4/25/17.
+ * Created by sofia on 11/3/15.
  */
 public class Dragon {
 

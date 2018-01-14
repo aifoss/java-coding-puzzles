@@ -1,2 +1,5 @@
 # coding-puzzles
-Coding Puzzles
+Coding Puzzles (Some Coding Problems/Assignments Done for Interviews over the Years)
+
+Tools: Java, IntelliJ
+

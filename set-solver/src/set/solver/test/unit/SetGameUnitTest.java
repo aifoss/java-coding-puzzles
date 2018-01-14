@@ -5,7 +5,7 @@ import org.junit.Test;
 import set.solver.main.SetGame;
 
 /**
- * Created by sofia on 4/25/17.
+ * Created by sofia on 8/23/15.
  */
 public class SetGameUnitTest {
 

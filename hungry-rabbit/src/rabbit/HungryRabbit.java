@@ -1,7 +1,7 @@
 package rabbit;
 
 /**
- * Created by sofia on 4/25/17.
+ * Created by sofia on 11/9/16.
  */
 public class HungryRabbit {
 

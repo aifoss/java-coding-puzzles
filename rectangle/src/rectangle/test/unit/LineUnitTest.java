@@ -6,7 +6,7 @@ import rectangle.main.Line;
 import rectangle.main.Point;
 
 /**
- * Created by sofia on 4/28/17.
+ * Created by sofia on 8/15/15.
  */
 public class LineUnitTest {
 
