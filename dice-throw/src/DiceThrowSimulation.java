@@ -5,6 +5,10 @@ import java.util.*;
  */
 
 /**
+ * Code written during a phone interview.
+ */
+
+/**
  Dice
  Write a program that simulates throwing two six-sided dice 200 times,
  and creates a histogram of the results, like this:
