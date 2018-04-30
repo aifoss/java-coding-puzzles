@@ -112,8 +112,9 @@ public class PlaneSeatReservation {
                     if (available(row, start, end)) {
                         printAvailableSeats(row, start, end);
                         return true;
+                    } else {
+                        return false;
                     }
-                    return false;
                 case 4:
                     if (available(row, start, end-1)) {
                         printAvailableSeats(row, start, end-1);

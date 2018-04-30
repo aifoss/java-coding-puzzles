@@ -58,7 +58,6 @@ public class BattleshipGame {
         BattleMap battleMap = new BattleMap(N, S, T);
         int[] res = battleMap.getNumberOfSunkenAndHitShips();
         return res[0]+","+res[1];
-
     }
 
 
@@ -78,7 +77,6 @@ public class BattleshipGame {
 
             for (String coordinate : shipCoordinates) {
                 String[] cells = coordinate.split(" ");
-
                 Battleship battleship = new Battleship(cells[0], cells[1]);
                 battleships.add(battleship);
             }
