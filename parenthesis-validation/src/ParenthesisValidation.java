@@ -26,11 +26,11 @@ import java.util.*;
  * '(){}[]' and '([{}])' would be considered valid, while '(}', '[(])', and '[({})](]' would be considered invalid.
  *
  * Examples:
- * Input	            Output
- * isValid( "(){}[]" )	true
- * isValid( "(}" )	    false
- * isValid( "[(])" )	false
- * isValid( "([{}])" )	true
+ *
+ * isValid( "(){}[]" ) // true
+ * isValid( "(}" ) // false
+ * isValid( "[(])" ) // false
+ * isValid( "([{}])" ) // true
  */
 public class ParenthesisValidation {
 
