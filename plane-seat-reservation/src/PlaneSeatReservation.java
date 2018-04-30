@@ -27,7 +27,6 @@ import java.util.Map;
  *
  * Write a function:
  *      public int solution(int N, String S);
- *
  * that, given the number of rows N and a list of reserved seats as string S,
  * returns the maximum number of three-person families that can be seated in the remaining unreserved seats.
  *

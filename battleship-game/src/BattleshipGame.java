@@ -29,7 +29,6 @@ import java.util.*;
  *
  * Write a function:
  *      public String solution(int N, String S, String T);
- *
  * that, given the size of the map N and two strings S, T that describe the positions of ships and hits respectively,
  * returns a string with two numbers:
  * the count of sunken ships and the count of ships that have been hit but not sunk, separated with a comma.
