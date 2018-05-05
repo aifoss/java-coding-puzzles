@@ -31,7 +31,7 @@ public class FileMergeSorter {
     }
 
     protected static void printInSortedOrder(String inputFile1, String inputFile2, int size) {
-        Queue<Integer> minHeap = new PriorityQueue<>();
+        Queue<Integer> minHeap = new PriorityQueue<>(2*size);
 
         try (Scanner scanner1 = new Scanner(new File(inputFile1));
             Scanner scanner2 = new Scanner(new File(inputFile2))) {
