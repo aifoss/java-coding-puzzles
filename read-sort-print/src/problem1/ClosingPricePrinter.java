@@ -28,15 +28,15 @@ public class ClosingPricePrinter {
 
 
     public static void main(String[] args) { // working directory: src
-        readPricesAndDisplayLatest(INPUT_FILE);
+        readPricesAndDisplayLatest(INPUT_FILE, ENCODING);
     }
 
-    protected static void readPricesAndDisplayLatest(String inputFile) {
+    protected static void readPricesAndDisplayLatest(String inputFile, String encoding) {
         String line = null;
         Double price = null;
 
         try (FileInputStream fis = new FileInputStream(new File(inputFile));
-             Scanner scanner = new Scanner(fis, ENCODING)) {
+             Scanner scanner = new Scanner(fis, encoding)) {
 
             while (scanner.hasNextLine()) {
                 if (line == null) {
